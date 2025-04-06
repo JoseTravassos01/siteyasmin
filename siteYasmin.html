@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Yasmin 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: url('flores.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 5vh 5vw;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 8vw;
+      color: #ffe7f9;
+      margin: 0;
+    }
+
+    .carrossel {
+      margin: 30px auto;
+      max-width: 90%;
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #000;
+    }
+
+    .carrossel img {
+      width: 100%;
+      display: none;
+      transition: opacity 1s ease-in-out;
+      border-radius: 15px;
+    }
+
+    .carrossel img.active {
+      display: block;
+    }
+
+    .texto {
+      margin: 30px auto;
+      width: 90%;
+      max-width: 650px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+      font-size: 1.1em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .texto p {
+      margin: 0;
+      line-height: 1.6em;
+      color: #49002d;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #ffcfe3;
+    }
+
+    /* Responsividade para telas pequenas */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 10vw;
+      }
+
+      .texto {
+        font-size: 1em;
+        padding: 20px;
+      }
+
+      footer {
+        font-size: 0.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Para Yasmin Dany Abdou 💖</h1>
+  </header>
+
+  <div class="carrossel">
+    <img src="nos1.png" class="active">
+    <img src="nos2.png">
+    <img src="nos3.png">
+    <!-- Adicione mais imagens se quiser -->
+  </div>
+
+  <div class="texto">
+    <p>
+      Yasmin, você é o motivo diário da minha felicidade mais sincera,
+      e você me lembra todos os dias, sem dizer nada, do porquê eu preciso me esforçar para ser melhor.
+      <br><br>Eu te amo muito, linda, mas muito mesmo! <br>Você é o <strong>AMOR DA MINHA VIDA</strong>. 💘<br><br>
+      Esse pequeno site é só uma forma de dizer que eu te admiro muito
+      e de mostrar o quanto você é especial pra mim. <br><br>
+      Obs: escolhi flores roxas e azuis porque você me lembra as cores, e consegue ser linda e delicada como uma flor. 🌸<br><br>
+      MUAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 💋
+    </p>
+  </div>
+
+  <footer>
+    Feito com muito amor para a minha princesa gatinha 💗
+  </footer>
+
+  <script>
+    let index = 0;
+    const imagens = document.querySelectorAll(".carrossel img");
+
+    setInterval(() => {
+      imagens[index].classList.remove("active");
+      index = (index + 1) % imagens.length;
+      imagens[index].classList.add("active");
+    }, 3500);
+  </script>
+
+</body>
+</html>
